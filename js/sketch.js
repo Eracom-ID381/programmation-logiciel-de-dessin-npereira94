@@ -25,13 +25,19 @@ function draw() {
     }
   }
   if (mousePressed) {
-
+    stroke(255, 23, 40);
     strokeWeight(40);
-    if (mouseY < height / 2) {
-      fill(250);
+    if (mouseY > height / 2) {
+      fill(50, 100, 250);
+      noStroke();
       circle(mouseX, mouseY, 150, 150);
+    } else {
+      line(mouseX, mouseY, pmouseX, pmouseY);
     }
   }
+
+
+
 }
 
 function windowResized() {
