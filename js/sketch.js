@@ -1,6 +1,7 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
+  let value = 0;
 
 
 }
@@ -13,6 +14,7 @@ function draw() {
     stroke(255)
     line(mouseX, mouseY, pmouseX, pmouseY);
   } */
+  fill(value);
   if (mouseIsPressed) {
     stroke(255, 23, 40);
     strokeWeight(40);
@@ -24,20 +26,12 @@ function draw() {
       line(mouseX, mouseY, pmouseX, pmouseY);
     }
   }
-  if (mousePressed) {
-    stroke(255, 23, 40);
-    strokeWeight(40);
-    if (mouseY > height / 2) {
-      fill(50, 100, 250);
-      noStroke();
-      circle(mouseX, mouseY, 150, 150);
-    } else {
-      line(mouseX, mouseY, pmouseX, pmouseY);
-    }
-  }
+}
 
-
-
+function mouseClicked() {
+  ellipse(mouseX, mouseY, 5, 5);
+  // prevent default
+  return false;
 }
 
 function windowResized() {
