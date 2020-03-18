@@ -30,6 +30,12 @@ function keyPressed() {
     line(mouseX, mouseY, 2000, 10);
 
   }
+  if (keyCode === RIGHT_ARROW) {
+    stroke(255);
+    strokeWeight(2);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+
+  }
 }
 
 function windowResized() {
