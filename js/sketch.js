@@ -2,6 +2,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
   rectWidth = width / 4;
+  cursor(CROSS);
 
 
 }
