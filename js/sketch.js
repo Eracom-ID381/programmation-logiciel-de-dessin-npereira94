@@ -13,11 +13,12 @@ function draw() {
     strokeWeight(2);
 
     if (mouseY < height / 2) {
-      line(width, mouseX, 10, mouseY);
+      line(width, mouseY, 10, mouseY);
       strokeWeight(2);
     }
-    if (mouseY > height - 209) {
-      line(mouseX, mouseY, mouseY, 100);
+    if (mouseY > height / 2) {
+      stroke(random(0, 255), random(0, 255), 255);
+      line(mouseX, mouseY, mouseY, 2000);
       strokeWeight(1);
     }
   }
@@ -29,7 +30,7 @@ function mouseClicked() {
 
   if (mouseY < height / 2) {
     noFill();
-    stroke(random(0, 255), random(0, 255), 255);
+    stroke(0, 255, 255);
     circle(500, 500, 400, 400, mouseX, mouseY, 50, 50);
   }
 }
