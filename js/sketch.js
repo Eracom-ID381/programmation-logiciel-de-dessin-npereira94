@@ -1,7 +1,6 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
-  rectWidth = width / 4;
   cursor(CROSS);
   colorMode(HSB, 255);
 
@@ -11,15 +10,10 @@ function setup() {
 function draw() {
 
   if (mouseIsPressed) {
-    stroke(255, 100, );
+
     strokeWeight(20);
     line(mouseX, mouseY, pmouseX, pmouseY);
 
-    if (mouseY < height / 2) {
-      strokeWeight(2);
-      line(mouseX, mouseY, 0, 0);
-
-    }
     if (mouseY > height / 2) {
       strokeWeight(2);
       stroke(random(0, 255), random(0, 255), 255);
@@ -32,24 +26,12 @@ function keyPressed() {
   if (keyCode === BACKSPACE) {
     background(0);
   }
-  if (keyCode === 'a') {
-    colorMode(RVB);
+  if (keyCode === A) {
+    strokeWeight(2);
+    line(mouseX, mouseY, 0, 0);
+
   }
 }
-
-
-function mouseClicked() {
-
-
-  if (mouseIsPressed) {
-    stroke(255, 100, );
-    strokeWeight(20);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-  }
-
-}
-
-
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
