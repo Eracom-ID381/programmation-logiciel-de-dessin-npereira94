@@ -1,26 +1,23 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
-
+  rectWidth = width / 4;
 
 
 }
 
 function draw() {
 
-
-
-
-
   if (mouseIsPressed) {
-    stroke(255, 20, );
-    strokeWeight(10);
+    stroke(255, 100, );
+    strokeWeight(2);
 
     if (mouseY < height / 2) {
-      (random(0, 255), random(0, 255), 255);
-      line(mouseX, mouseY, width / 2, height / 2);
-      fill(random(0, 255), random(0, 255), 255);
-      stroke(255, 200, );
+      line(width, mouseX, 10, mouseY);
+      strokeWeight(2);
+    }
+    if (mouseY > height - 209) {
+      line(mouseX, mouseY, mouseY, 100);
       strokeWeight(1);
     }
   }
@@ -28,12 +25,34 @@ function draw() {
 
 
 function mouseClicked() {
-  ellipse(mouseX, mouseY, 5, 5);
-  // prevent default
-  return false;
+
+  noFill();
+  stroke(random(0, 255), random(0, 255), 255);
+  arc(mouseX, mouseY, 500, 500, mouseX, mouseY, 50, 50);
+
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   background(0);
+}
+
+
+function keyPressed() {
+  let keyIndex = -1;
+  if (key >= 'a' && key <= 'z') {
+    keyIndex = key.charCodeAt(0) - 'a'.charCodeAt(0);
+  }
+  if (keyIndex === -1) {
+    // If it's not a letter key, clear the screen
+    background(230);
+  } else {
+    // It's a letter key, fill a rectangle
+    randFill_r = Math.floor(Math.random() * 255 + 1);
+    randFill_g = Math.floor(Math.random() * 255 + 1);
+    randFill_b = Math.floor(Math.random() * 255 + 1);
+    fill(randFill_r, randFill_g, randFill_b);
+    let x = map(keyIndex, 0, 25, 0, width - rectWidth);
+    rect(x, 0, rectWidth, height);
+  }
 }
