@@ -28,6 +28,16 @@ function draw() {
   }
 }
 
+function keyPressed() {
+  if (keyCode === BACKSPACE) {
+    background(0);
+  }
+  if (keyCode === 'a') {
+    colorMode(RVB);
+  }
+}
+
+
 function mouseClicked() {
 
 
@@ -39,13 +49,7 @@ function mouseClicked() {
 
 }
 
-function keyTyped() {
-  if (key === 'a') {
-    background = 255, 30, 10;
-  } else if (key === 'b') {
-    value = 0;
-  }
-}
+
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
