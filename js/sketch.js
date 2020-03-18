@@ -3,6 +3,7 @@ function setup() {
   background(0);
   rectWidth = width / 4;
   cursor(CROSS);
+  colorMode(HSB, 255);
 
 
 }
@@ -12,15 +13,16 @@ function draw() {
   if (mouseIsPressed) {
     stroke(255, 100, );
     strokeWeight(2);
+    line(mouseX, mouseY, pmouseX, pmouseY);
 
-    if (mouseY < height / 4) {
-      line(mouseX, mouseY, 10, mouseY);
+    if (mouseY < height / 2) {
+      line(mouseX, mouseY, 0, 0);
       strokeWeight(2);
     }
-    if (mouseY > height / 4) {
+    if (mouseY > height / 2) {
       stroke(random(0, 255), random(0, 255), 255);
-      line(mouseX, mouseY, mouseY, 2);
-      strokeWeight(1);
+      line(mouseX, mouseY, 2000, 10);
+
     }
   }
 }
