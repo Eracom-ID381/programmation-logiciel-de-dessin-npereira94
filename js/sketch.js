@@ -26,10 +26,12 @@ function draw() {
 
 function mouseClicked() {
 
-  noFill();
-  stroke(random(0, 255), random(0, 255), 255);
-  arc(mouseX, mouseY, 500, 500, mouseX, mouseY, 50, 50);
 
+  if (mouseY < height / 2) {
+    noFill();
+    stroke(random(0, 255), random(0, 255), 255);
+    circle(500, 500, 400, 400, mouseX, mouseY, 50, 50);
+  }
 }
 
 function windowResized() {
