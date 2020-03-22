@@ -16,6 +16,7 @@ function setup() {
 function draw() {
   freq = map(mouseX, 0, width, 100, 1000);
   amp = map(mouseY, 0, height, 0, 1);
+
   if (mouseIsPressed) {
     stroke(255);
     strokeWeight(20);
@@ -30,17 +31,21 @@ function draw() {
 
   }
   if (keyCode === RIGHT_ARROW) {
-    stroke(255);
-    strokeWeight(2);
-    line(mouseX, mouseY, 30, 30);
+    stroke(10, 20, 200);
+    strokeWeight(20);
+    line(mouseX, mouseY, pmouseX, pmouseY);
 
   }
   if (keyCode === DOWN_ARROW) {
-    fill(23, 49, 100);
-    Nostroke();
-    square(mouseX, mouseY, pmouseX, pmouseY);
+    stroke(255);
+    strokeWeight(2);
+    line(mouseX, mouseY, pmouseX, pmouseY);
 
   }
+}
+
+function mouseReleased() {
+  osc.stop();
 }
 
 function keyPressed() {
