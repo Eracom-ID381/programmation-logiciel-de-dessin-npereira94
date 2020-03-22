@@ -17,13 +17,6 @@ function draw() {
     line(mouseX, mouseY, pmouseX, pmouseY);
 
   }
-}
-
-function keyPressed() {
-
-  if (keyCode === BACKSPACE) {
-    background(0);
-  }
   if (keyCode === LEFT_ARROW) {
     strokeWeight(2);
     stroke(random(0, 255), random(0, 255), 255);
@@ -36,6 +29,15 @@ function keyPressed() {
     line(mouseX, mouseY, pmouseX, pmouseY);
 
   }
+}
+
+function keyPressed() {
+
+  if (keyCode === BACKSPACE) {
+    background(0);
+  }
+
+
 }
 
 function windowResized() {
