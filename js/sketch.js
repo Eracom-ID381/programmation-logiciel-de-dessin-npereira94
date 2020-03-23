@@ -1,6 +1,6 @@
 let osc, freq, amp;
 osc = new p5.Oscillator('square');
-
+let mySound
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -21,6 +21,7 @@ function draw() {
     stroke(255);
     strokeWeight(20);
     line(mouseX, mouseY, pmouseX, pmouseY);
+
     osc.start();
 
   }
@@ -42,6 +43,11 @@ function draw() {
     line(mouseX, mouseY, pmouseX, pmouseY);
 
   }
+}
+
+function preload() {
+  soundFormats('mp3', 'ogg');
+  mySound = loadSound('assets/doorbell');
 }
 
 function mouseReleased() {
