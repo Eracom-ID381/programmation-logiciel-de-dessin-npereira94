@@ -9,8 +9,6 @@ function setup() {
   colorMode(HSB, 255);
 
 
-
-
 }
 
 function draw() {
@@ -21,7 +19,6 @@ function draw() {
     stroke(255);
     strokeWeight(20);
     line(mouseX, mouseY, pmouseX, pmouseY);
-
     osc.start();
 
   }
@@ -45,10 +42,6 @@ function draw() {
   }
 }
 
-function preload() {
-  soundFormats('mp3', 'ogg');
-  mySound = loadSound('assets/doorbell');
-}
 
 function mouseReleased() {
   osc.stop();
