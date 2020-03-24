@@ -12,17 +12,18 @@ function setup() {
 }
 
 function draw() {
-  freq = map(mouseX, 0, width, 100, 1000);
+  freq = map(mouseX, 0, width, 100, 500);
   amp = map(mouseY, 0, height, 0, 1);
 
   if (mouseIsPressed) {
     stroke(255);
-    strokeWeight(20);
+    strokeWeight(10);
     line(mouseX, mouseY, pmouseX, pmouseY);
-    osc.start();
 
   }
   if (keyCode === LEFT_ARROW) {
+    mySound.start();
+
     strokeWeight(2);
     stroke(random(0, 255), random(0, 255), 255);
     line(mouseX, mouseY, 2000, 10);
@@ -36,6 +37,12 @@ function draw() {
   }
   if (keyCode === DOWN_ARROW) {
     stroke(255);
+    strokeWeight(2);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+
+  }
+  if (keyCode === ENTER) {
+    stroke(200, 20, 100);
     strokeWeight(2);
     line(mouseX, mouseY, pmouseX, pmouseY);
 
