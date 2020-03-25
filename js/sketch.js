@@ -9,8 +9,7 @@ function preload() {
 function setup() {
 
   let cnv = createCanvas(windowWidth, windowHeight);
-  let cnv2 = createCanvas(100, 1000);
-  background(250, 20, 50);
+  background(0);
   cursor(CROSS);
   colorMode(HSB, 255);
 
@@ -18,12 +17,15 @@ function setup() {
 
 function draw() {
 
+  strokeWeight(2);
+  stroke(250);
+  line(200, 1000, 200, 0);
 
   if (mouseIsPressed) {
+
     stroke(255);
     strokeWeight(10);
     line(mouseX, mouseY, pmouseX, pmouseY);
-
 
   }
   /*Normal Mode*/
