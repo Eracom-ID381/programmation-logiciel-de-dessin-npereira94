@@ -26,12 +26,14 @@ function draw() {
     stroke(255);
     strokeWeight(10);
     line(mouseX, mouseY, pmouseX, pmouseY);
+
     if (mouseY < height / 2) {
       (random(0, 255), random(0, 255), 255);
-      line(mouseX, mouseY, width / 2, height / 2);
-      fill(random(0, 255), random(0, 255), 255);
-      stroke(255, 200, );
       strokeWeight(1);
+      fill(random(0, 255), random(0, 255), 255);
+      line(mouseX, mouseY, width / 2, height / 2);
+      stroke(255, 200, );
+
     }
   }
   /*Normal Mode*/
