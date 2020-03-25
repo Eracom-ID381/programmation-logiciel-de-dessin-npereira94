@@ -1,13 +1,15 @@
 let mySound1;
-let mySound2; 
+let mySound2;
+let mySound3;
 let mode = 0;
 
 
 
 function preload() {
   // soundFormats('mp3', 'ogg');
-  mySound = loadSound('audio/bebe.mp3');
+  mySound1 = loadSound('audio/bebe.mp3');
   mySound2 = loadSound('audio/C2C.mp3');
+  mySound3 = loadSound('audio/blue.mp3');
 }
 
 
@@ -60,17 +62,21 @@ function draw() {
 
 function mousePressed() {
   if (mode === 0) {
-    mySound.play();
-  } else if (mode === 1) { 
+    mySound1.play();
+  } else if (mode === 1) {
     mySound2.play();
+  } else if (mode === 2) {
+    mySound3.play();
   }
 }
 
 function mouseReleased() {
   if (mode === 0) {
-    mySound.pause();
-  } else if (mode === 1) { 
+    mySound1.pause();
+  } else if (mode === 1) {
     mySound2.pause();
+  } else if (mode === 2) {
+    mySound3.pause();
   }
 }
 
