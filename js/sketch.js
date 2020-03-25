@@ -9,18 +9,15 @@ function preload() {
 function setup() {
 
   let cnv = createCanvas(windowWidth, windowHeight);
-  background(0);
+  let cnv2 = createCanvas(100, 1000);
+  background(250, 20, 50);
   cursor(CROSS);
   colorMode(HSB, 255);
 
-
 }
 
-
-
 function draw() {
-  freq = map(mouseX, 0, width, 100, 500);
-  amp = map(mouseY, 0, height, 0, 1);
+
 
   if (mouseIsPressed) {
     stroke(255);
@@ -30,6 +27,7 @@ function draw() {
 
   }
   /*Normal Mode*/
+
   if (keyCode === LEFT_ARROW) {
 
     strokeWeight(2);
@@ -41,7 +39,7 @@ function draw() {
     mySound.stop();
 
   }
-  /*Mode kid*/
+  /*Kid Mode*/
 
   if (keyCode === RIGHT_ARROW) {
 
