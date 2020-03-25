@@ -1,6 +1,7 @@
 let mySound;
 let mode = 0;
 
+
 function preload() {
   // soundFormats('mp3', 'ogg');
   mySound = loadSound('audio/bebe.mp3');
@@ -12,49 +13,35 @@ function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   background(0);
   cursor(CROSS);
+  colorMode(HSB, 255);
 
 }
 
 function draw() {
+  fill(random(0, 255), random(0, 255), 255);
 
-  strokeWeight(2);
-  stroke(250);
-  line(200, 1000, 200, 10);
 
-  if (mouseIsPressed) {
-
-    stroke(255);
-    strokeWeight(10);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-
-    if (mouseY < height / 2) {
-
-      strokeWeight(1);
-      fill(random(0, 255), random(0, 255), 255);
-      line(mouseX, mouseY, width / 2, height / 2);
-      stroke(255, 200, );
-
-    }
-  }
   // Default and Left Arrow
   if (mode === 0) {
-    background(0);
-    strokeWeight(2);
-    stroke(random(0, 255), random(0, 255), 255);
-    line(mouseX, mouseY, 2000, 10);
+    if (MouseIsPressed) {
+
+      strokeWeight(2);
+      stroke(random(0, 255), random(0, 255), 255);
+      line(mouseX, mouseY, 2000, 10);
+    }
   }
   // Right Arrow
   else if (mode === 1) {
+    if (MouseIsPressed) {
 
-    background('#0f0');
-    strokeWeight(5);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+      strokeWeight(5);
+      line(mouseX, mouseY, pmouseX, pmouseY);
+    }
   }
   // Up Arrow
   else if (mode === 2) {
-    background(250, 0, 0);
-    stroke(255);
-    strokeWeight(2);
+
+    noFill();
     square(mouseX, mouseY, pmouseX, pmouseY);
 
 
@@ -62,6 +49,12 @@ function draw() {
   } else if (mode === 3) {
 
   }
+}
+
+function MouseIsPressed() {
+  strokeWeight(2);
+  line(mouseX, mouseY, 2000, 10);
+
 }
 
 function mousePressed() {
