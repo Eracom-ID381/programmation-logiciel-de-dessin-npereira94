@@ -53,7 +53,7 @@ function draw() {
   }
   /*Christmas Mode*/
   if (keyCode === DOWN_ARROW) {
-    background(0);
+    background(250, 0, 0);
     stroke(255);
     strokeWeight(2);
     line(mouseX, mouseY, pmouseX, pmouseY);
