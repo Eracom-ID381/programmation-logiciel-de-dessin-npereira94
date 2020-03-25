@@ -27,13 +27,8 @@ function draw() {
     strokeWeight(10);
     line(mouseX, mouseY, pmouseX, pmouseY);
     mySound.play();
-    else {
-      stroke(255);
-      strokeWeight(10);
-      line(mouseX, mouseY, pmouseX, pmouseY);
-      mySound.stop();
-    }
   }
+
   if (keyCode === LEFT_ARROW) {
 
     strokeWeight(2);
