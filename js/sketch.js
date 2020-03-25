@@ -26,17 +26,19 @@ function draw() {
     stroke(255);
     strokeWeight(10);
     line(mouseX, mouseY, pmouseX, pmouseY);
-    mySound.play();
-  } else {
 
-    mySound.stop();
 
   }
+  /*Normal Mode*/
   if (keyCode === LEFT_ARROW) {
 
     strokeWeight(2);
     stroke(random(0, 255), random(0, 255), 255);
     line(mouseX, mouseY, 2000, 10);
+    mySound.play();
+  } else {
+
+    mySound.stop();
 
   }
   /*Mode kid*/
@@ -44,11 +46,12 @@ function draw() {
   if (keyCode === RIGHT_ARROW) {
 
     background('#0f0');
-    fill(random(0, 255), random(0, 255), 255);
+    strokeWeight(5);
+    stroke(random(0, 255), random(0, 255), 255);
     line(mouseX, mouseY, pmouseX, pmouseY);
 
-
   }
+
   if (keyCode === DOWN_ARROW) {
     stroke(255);
     strokeWeight(2);
