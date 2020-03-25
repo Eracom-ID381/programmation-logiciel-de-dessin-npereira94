@@ -9,9 +9,10 @@ function preload() {
 function setup() {
 
   let cnv = createCanvas(windowWidth, windowHeight);
-  text('tap here to play', 10, 20);
+
   background(0);
   cursor(CROSS);
+  text('tap here to play', 100, 200);
 
 }
 
