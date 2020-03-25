@@ -49,12 +49,12 @@ function draw() {
   } else if (mode === 3) {
 
   }
-}
 
-function MouseIsPressed() {
-  strokeWeight(2);
-  line(mouseX, mouseY, 2000, 10);
 
+  function MouseIsPressed() {
+    strokeWeight(2);
+    line(mouseX, mouseY, 2000, 10);
+  }
 }
 
 function mousePressed() {
@@ -66,7 +66,7 @@ function mouseReleased() {
 }
 
 function keyPressed() {
-  mySound.stop();
+
   if (keyCode === LEFT_ARROW) {
     mode = 0;
   } else if (keyCode === RIGHT_ARROW) {
