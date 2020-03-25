@@ -18,7 +18,7 @@ function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   background(0);
   cursor(CROSS);
-  colorMode(HSB, 255);
+
 
 }
 
@@ -34,7 +34,7 @@ function draw() {
     if (mode === 0) {
 
       strokeWeight(2);
-      stroke(random(0, 255), random(0, 255), 255);
+      stroke(random(0, 255))
       line(mouseX, mouseY, 2000, 10);
 
 
@@ -47,6 +47,8 @@ function draw() {
       // Up Arrow
     } else if (mode === 2) {
 
+      strokeWeight(1);
+      stroke(random(0, 255), random(0, 255), 255);
       noFill();
       square(mouseX, mouseY, pmouseX, pmouseY);
 
@@ -54,7 +56,8 @@ function draw() {
     } else if (mode === 3) {
 
       stroke(255, 102, 0);
-      curve(73, 24, 73, 61, 15, 65, 15, 65);
+      curve(mouseX, mouseY, pmouseX, pmouseY, 150, 650, 150, 650);
+      fill(0, 102, 153);
     }
   }
 }
@@ -85,15 +88,19 @@ function keyPressed() {
   if (keyCode === LEFT_ARROW) {
     mode = 0;
     mySound = 0;
+    background(0);
   } else if (keyCode === RIGHT_ARROW) {
     mode = 1;
     mySound = 1;
+    background(0);
   } else if (keyCode === UP_ARROW) {
     mode = 2;
     mySound = 2;
+    background(0);
   } else if (keyCode === DOWN_ARROW) {
     mode = 3;
     mySound = 3;
+    background(0);
   }
 
   if (keyCode === BACKSPACE) {
