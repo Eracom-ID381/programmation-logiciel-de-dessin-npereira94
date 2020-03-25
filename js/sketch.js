@@ -31,7 +31,7 @@ function draw() {
   /*Normal Mode*/
 
   if (keyCode === LEFT_ARROW) {
-
+    background(0);
     strokeWeight(2);
     stroke(random(0, 255), random(0, 255), 255);
     line(mouseX, mouseY, 2000, 10);
@@ -44,7 +44,7 @@ function draw() {
   /*Kid Mode*/
 
   if (keyCode === RIGHT_ARROW) {
-
+    background(0);
     background('#0f0');
     strokeWeight(5);
     stroke(random(0, 255), random(0, 255), 255);
@@ -53,6 +53,7 @@ function draw() {
   }
   /*Christmas Mode*/
   if (keyCode === DOWN_ARROW) {
+    background(0);
     stroke(255);
     strokeWeight(2);
     line(mouseX, mouseY, pmouseX, pmouseY);
