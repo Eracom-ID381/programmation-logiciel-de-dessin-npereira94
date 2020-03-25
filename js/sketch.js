@@ -56,10 +56,10 @@ function draw() {
 
       // Down Arrow
     } else if (mode === 3) {
-
+      strokeWeight(5);
       stroke(255, 102, 0);
-      curve(mouseX, mouseY, pmouseX, pmouseY, 150, 650, 150, 650);
-      fill(0, 102, 153);
+      curve(mouseX, mouseY, pmouseX, pmouseY, mouseX, 650, 150, pmouseY);
+      noFill();
     }
   }
 }
