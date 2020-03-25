@@ -9,7 +9,6 @@ function preload() {
 function setup() {
 
   let cnv = createCanvas(windowWidth, windowHeight);
-
   background(0);
   cursor(CROSS);
   text('tap here to play', 100, 200);
@@ -52,7 +51,7 @@ function draw() {
     line(mouseX, mouseY, pmouseX, pmouseY);
 
   }
-
+  /*Christmas Mode*/
   if (keyCode === DOWN_ARROW) {
     stroke(255);
     strokeWeight(2);
