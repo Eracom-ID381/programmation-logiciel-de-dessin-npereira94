@@ -2,6 +2,8 @@ let mySound;
 let mode = 0;
 
 
+
+
 function preload() {
   // soundFormats('mp3', 'ogg');
   mySound = loadSound('audio/bebe.mp3');
@@ -18,44 +20,45 @@ function setup() {
 }
 
 function draw() {
-  fill(random(0, 255), random(0, 255), 255);
+  stroke(255);
+  textSize(32);
+  text('Let the music guide your hand', 1200, 100);
+  fill(0, 102, 153);
 
+  if (mouseIsPressed) {
 
-  // Default and Left Arrow
-  if (mode === 0) {
-    if (MouseIsPressed) {
+    // Default and Left Arrow
+    if (mode === 0) {
+      //  if (MouseIsPressed) {
 
       strokeWeight(2);
       stroke(random(0, 255), random(0, 255), 255);
       line(mouseX, mouseY, 2000, 10);
-    }
-  }
-  // Right Arrow
-  else if (mode === 1) {
-    if (MouseIsPressed) {
+
+
+      // Right Arrow
+    } else if (mode === 1) {
+
 
       strokeWeight(5);
       line(mouseX, mouseY, pmouseX, pmouseY);
+
+      // Up Arrow
+    } else if (mode === 2) {
+
+      noFill();
+      square(mouseX, mouseY, pmouseX, pmouseY);
+
+
+      // Down Arrow
+    } else if (mode === 3) {
+
+      stroke(255, 102, 0);
+      curve(73, 24, 73, 61, 15, 65, 15, 65);
     }
   }
-  // Up Arrow
-  else if (mode === 2) {
-
-    noFill();
-    square(mouseX, mouseY, pmouseX, pmouseY);
-
-
-    // Down Arrow
-  } else if (mode === 3) {
-
-  }
-
-
-  function MouseIsPressed() {
-    strokeWeight(2);
-    line(mouseX, mouseY, 2000, 10);
-  }
 }
+
 
 function mousePressed() {
   mySound.play();
