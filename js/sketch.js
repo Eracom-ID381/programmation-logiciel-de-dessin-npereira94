@@ -1,12 +1,12 @@
-let mySound;
+let mySound = 0;
 let mode = 0;
-
 
 
 
 function preload() {
   // soundFormats('mp3', 'ogg');
   mySound = loadSound('audio/bebe.mp3');
+  mySound + 1 = loadSound('audio/C2C.mp3');
 }
 
 
@@ -29,16 +29,15 @@ function draw() {
 
     // Default and Left Arrow
     if (mode === 0) {
-      //  if (MouseIsPressed) {
 
       strokeWeight(2);
       stroke(random(0, 255), random(0, 255), 255);
       line(mouseX, mouseY, 2000, 10);
+      mySound()
 
 
       // Right Arrow
     } else if (mode === 1) {
-
 
       strokeWeight(5);
       line(mouseX, mouseY, pmouseX, pmouseY);
@@ -48,7 +47,6 @@ function draw() {
 
       noFill();
       square(mouseX, mouseY, pmouseX, pmouseY);
-
 
       // Down Arrow
     } else if (mode === 3) {
@@ -72,12 +70,16 @@ function keyPressed() {
 
   if (keyCode === LEFT_ARROW) {
     mode = 0;
+    mySound = 0;
   } else if (keyCode === RIGHT_ARROW) {
     mode = 1;
+    mySound = 1;
   } else if (keyCode === UP_ARROW) {
     mode = 2;
+    mySound = 2;
   } else if (keyCode === DOWN_ARROW) {
     mode = 3;
+    mySound = 3;
   }
 
   if (keyCode === BACKSPACE) {
