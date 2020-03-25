@@ -12,7 +12,6 @@ function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   background(0);
   cursor(CROSS);
-  text('tap here to play', 100, 200);
 
 }
 
