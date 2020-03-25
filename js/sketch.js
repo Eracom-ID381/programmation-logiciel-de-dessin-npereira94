@@ -3,7 +3,7 @@ let mode = 0;
 
 function preload() {
   // soundFormats('mp3', 'ogg');
-  mySound = loadSound('audio/Bullit.mp3');
+  mySound = loadSound('audio/bebe.mp3');
 }
 
 
@@ -29,7 +29,7 @@ function draw() {
     line(mouseX, mouseY, pmouseX, pmouseY);
 
     if (mouseY < height / 2) {
-      (random(0, 255), random(0, 255), 255);
+
       strokeWeight(1);
       fill(random(0, 255), random(0, 255), 255);
       line(mouseX, mouseY, width / 2, height / 2);
@@ -37,10 +37,6 @@ function draw() {
 
     }
   }
-
-
-  /*Normal Mode*/
-
   // Default and Left Arrow
   if (mode === 0) {
     background(0);
@@ -50,10 +46,9 @@ function draw() {
   }
   // Right Arrow
   else if (mode === 1) {
-    background(0);
+
     background('#0f0');
     strokeWeight(5);
-    stroke(random(0, 255), random(0, 255), 255);
     line(mouseX, mouseY, pmouseX, pmouseY);
   }
   // Up Arrow
@@ -61,17 +56,16 @@ function draw() {
     background(250, 0, 0);
     stroke(255);
     strokeWeight(2);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+    square(mouseX, mouseY, pmouseX, pmouseY);
+
+
+    // Down Arrow
+  } else if (mode === 3) {
 
   }
-  // Down Arrow
-  else if (mode === 3) { 
-
-  }
-
 }
 
-function mousePressed() { 
+function mousePressed() {
   mySound.play();
 }
 
@@ -87,7 +81,7 @@ function keyPressed() {
     mode = 1;
   } else if (keyCode === UP_ARROW) {
     mode = 2;
-  } else if (keyCode === DOWN_ARROW) { 
+  } else if (keyCode === DOWN_ARROW) {
     mode = 3;
   }
 
