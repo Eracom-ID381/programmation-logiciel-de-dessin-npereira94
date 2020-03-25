@@ -19,7 +19,7 @@ function draw() {
 
   strokeWeight(2);
   stroke(250);
-  line(200, 1000, 200, 0);
+  line(200, 1000, 200, 10);
 
   if (mouseIsPressed) {
 
