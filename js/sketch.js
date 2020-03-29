@@ -39,13 +39,19 @@ function draw() {
 
   if (mouseIsPressed) {
 
+
     // Default and Left Arrow
     if (mode === 0) {
 
 
-      strokeWeight(2);
-      stroke(random(0, 255))
-      line(mouseX, mouseY, 2000, 10);
+      if (mouseY < height / 2) {
+        fill(random(0, 255), random(0, 255), 255);
+        stroke(255, 200, );
+        strokeWeight(1);
+        (random(0, 255), random(0, 255), 255);
+        line(mouseX, mouseY, width / 2, height / 2);
+
+      }
 
 
       // Right Arrow
@@ -54,6 +60,14 @@ function draw() {
       strokeWeight(5);
       line(mouseX, mouseY, pmouseX, pmouseY);
 
+
+
+
+
+
+
+
+
       // Up Arrow
     } else if (mode === 2) {
 
@@ -61,10 +75,8 @@ function draw() {
       stroke(random(0, 255), random(0, 255), 255);
       noFill();
       square(mouseX, height / 2, 12, width / 2);
-
       if (width > 200) {
         square(mouseX, mouseY, pmouseX, pmouseY);
-
       }
 
       // Down Arrow
