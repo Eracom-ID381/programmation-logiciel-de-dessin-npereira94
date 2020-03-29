@@ -26,6 +26,11 @@ function setup() {
 
 function draw() {
   stroke(255);
+  textSize(10);
+  text('Medusa', 50, 100);
+
+
+  stroke(255);
   textSize(32);
   text('Let the music guide your hand', 1200, 100);
   fill(0, 102, 153);
@@ -34,6 +39,7 @@ function draw() {
 
     // Default and Left Arrow
     if (mode === 0) {
+
 
       strokeWeight(2);
       stroke(random(0, 255))
