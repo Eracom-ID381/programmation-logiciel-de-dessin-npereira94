@@ -25,10 +25,12 @@ function setup() {
 }
 
 function draw() {
-  stroke(255);
+  stroke(0);
   textSize(10);
   text('Medusa', 50, 100);
-
+  text('Medusa', 50, 100);
+  text('Rousse', 50, 260);
+  text('Blue World', 50, 340);
 
   stroke(255);
   textSize(32);
