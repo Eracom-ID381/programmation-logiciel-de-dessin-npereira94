@@ -48,8 +48,15 @@ function draw() {
         fill(random(0, 255), random(0, 255), 255);
         stroke(255, 200, );
         strokeWeight(1);
-        (random(0, 255), random(0, 255), 255);
         line(mouseX, mouseY, width / 2, height / 2);
+
+      } else {
+
+        stroke(255, 100, 200);
+        strokeWeight(1);
+        fill("pink");
+        line(mouseX, mouseY, width / 2, height / 2);
+
 
       }
 
