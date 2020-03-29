@@ -56,9 +56,8 @@ function draw() {
         strokeWeight(1);
         fill("pink");
         line(mouseX, mouseY, width / 2, height / 2);
-
-
       }
+
 
 
       // Right Arrow
@@ -70,11 +69,6 @@ function draw() {
 
 
 
-
-
-
-
-
       // Up Arrow
     } else if (mode === 2) {
 
@@ -82,16 +76,27 @@ function draw() {
       stroke(random(0, 255), random(0, 255), 255);
       noFill();
       square(mouseX, height / 2, 12, width / 2);
+
       if (width > 200) {
         square(mouseX, mouseY, pmouseX, pmouseY);
       }
 
       // Down Arrow
     } else if (mode === 3) {
-      strokeWeight(2);
-      stroke(255, 102, 0);
-      noFill();
-      curve(mouseX, mouseY, pmouseX, pmouseY, mouseX, 650, 150, pmouseY);
+
+
+      if (mouseY < height / 2) {
+        strokeWeight(2);
+        stroke(255, 102, 0);
+        noFill();
+        curve(mouseX, mouseY, pmouseX, pmouseY, mouseX, 650, 150, pmouseY);
+      } else {
+
+        strokeWeight(2);
+        stroke(255, 102, 0);
+        noFill();
+        curve(mouseX, mouseY, pmouseX, pmouseY, mouseX, mouseY, 10, pmouseY);
+      }
 
     }
   }
