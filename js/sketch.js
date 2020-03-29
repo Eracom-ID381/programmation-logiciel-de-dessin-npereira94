@@ -60,7 +60,12 @@ function draw() {
       strokeWeight(1);
       stroke(random(0, 255), random(0, 255), 255);
       noFill();
-      square(mouseX, mouseY, pmouseX, pmouseY);
+      square(mouseX, height / 2, 12, width / 2);
+
+      if (width > 200) {
+        square(mouseX, mouseY, pmouseX, pmouseY);
+
+      }
 
       // Down Arrow
     } else if (mode === 3) {
