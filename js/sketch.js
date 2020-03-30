@@ -63,20 +63,11 @@ function draw() {
       // Right Arrow
     } else if (mode === 1) {
 
-      if (mouseY < 300) {
-        strokeWeight(5);
-        stroke(255);
-        line(mouseX, mouseY, pmouseX, pmouseY);
 
-      }
+      strokeWeight(5);
+      stroke(255, 0, 10, 0.3);
+      triangle(mouseX, mouseY, 100, 20, 78, 30);
 
-      if (mouseY < 600) {
-
-        strokeWeight(10);
-        stroke("red");
-        line(mouseX, mouseY, pmouseX, pmouseY);
-
-      }
 
 
       // Up Arrow
