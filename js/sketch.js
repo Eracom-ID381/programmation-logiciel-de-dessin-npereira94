@@ -136,6 +136,10 @@ function keyPressed() {
   } else if (keyCode === RIGHT_ARROW) {
     mode = 1;
     background(0);
+    noStroke(0);
+    fill(255)
+    textSize(100);
+    text("A", 50, 500)
   } else if (keyCode === UP_ARROW) {
     mode = 2;
     background(0);
@@ -146,6 +150,9 @@ function keyPressed() {
 
   if (keyCode === BACKSPACE) {
     background(0);
+  }
+  if (keyCode === "a") {
+    fill("pink")
   }
 }
 
