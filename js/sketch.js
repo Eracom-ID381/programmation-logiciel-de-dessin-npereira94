@@ -73,14 +73,12 @@ function draw() {
       // Up Arrow
     } else if (mode === 2) {
 
+
       strokeWeight(1);
       stroke(random(0, 255), random(0, 255), 255);
       noFill();
-      square(mouseX, height / 2, 12, width / 2);
+      circle(mouseX, mouseY, pmouseX, pmouseY);
 
-      if (width > 200) {
-        square(mouseX, mouseY, pmouseX, pmouseY);
-      }
 
       // Down Arrow
     } else if (mode === 3) {
