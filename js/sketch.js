@@ -84,7 +84,8 @@ function draw() {
     } else if (mode === 3) {
 
       noFill();
-      stroke(230, 120, 29);
+      strokeWeight(1);
+      stroke(230, 120, 0);
       bezier(mouseX, mouseY, pmouseX, pmouseY, 1000, 1000, 100, 500, 200, 400, 100, 400);
 
     }
