@@ -66,7 +66,7 @@ function draw() {
 
       strokeWeight(5);
       stroke(255, 0, 10, 0.3);
-      triangle(mouseX, mouseY, 100, 20, 78, 30);
+      triangle(mouseX, mouseY, 100, 10, 78, 30);
 
 
 
@@ -93,8 +93,8 @@ function draw() {
         curve(mouseX, mouseY, pmouseX, pmouseY, mouseX, 650, 150, pmouseY);
       } else {
 
-        strokeWeight(2);
-        stroke(255, 102, 0);
+
+        stroke(255, 10, 0);
         noFill();
         curve(mouseX, mouseY, pmouseX, pmouseY, mouseX, mouseY, 10, pmouseY);
       }
@@ -135,11 +135,7 @@ function keyPressed() {
     background(0);
   } else if (keyCode === RIGHT_ARROW) {
     mode = 1;
-    background(0);
-    noStroke(0);
-    fill(255)
-    textSize(100);
-    text("A", 50, 500)
+    background(200, 100, 10);
   } else if (keyCode === UP_ARROW) {
     mode = 2;
     background(0);
@@ -150,9 +146,6 @@ function keyPressed() {
 
   if (keyCode === BACKSPACE) {
     background(0);
-  }
-  if (keyCode === "a") {
-    fill("pink")
   }
 }
 
