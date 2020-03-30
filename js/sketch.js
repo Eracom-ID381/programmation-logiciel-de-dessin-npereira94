@@ -92,9 +92,9 @@ function draw() {
         noFill();
         line(mouseX, mouseY, pmouseX, pmouseY);
       } else {
-        stroke(255, 10, 0);
-        noFill();
-        triangle(mouseX, mouseY, mouseX, mouseY, pmouseX, 75);
+        Stroke(255, 102, 0);
+        nofill();
+        rect(mouseX, mouseY, 50, 50);
       }
 
     }
