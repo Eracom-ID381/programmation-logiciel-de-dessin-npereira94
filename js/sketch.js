@@ -90,13 +90,11 @@ function draw() {
         strokeWeight(2);
         stroke(255, 102, 0);
         noFill();
-        curve(mouseX, mouseY, pmouseX, pmouseY, mouseX, 650, 150, pmouseY);
+        line(mouseX, mouseY, pmouseX, pmouseY);
       } else {
-
-
         stroke(255, 10, 0);
         noFill();
-        curve(mouseX, mouseY, pmouseX, pmouseY, mouseX, mouseY, 10, pmouseY);
+        triangle(mouseX, mouseY, mouseX, mouseY, pmouseX, 75);
       }
 
     }
