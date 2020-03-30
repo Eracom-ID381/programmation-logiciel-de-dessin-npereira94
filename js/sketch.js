@@ -45,7 +45,7 @@ function draw() {
 
 
       if (mouseY < height / 2) {
-        fill(random(0, 255), random(0, 255), 255);
+
         stroke(255, 200, );
         strokeWeight(1);
         line(mouseX, mouseY, width / 2, height / 2);
@@ -85,17 +85,9 @@ function draw() {
       // Down Arrow
     } else if (mode === 3) {
 
-
-      if (mouseY < height / 2) {
-        strokeWeight(2);
-        stroke(255, 102, 0);
-        noFill();
-        line(mouseX, mouseY, pmouseX, pmouseY);
-      } else {
-        Stroke(255, 102, 0);
-        nofill();
-        rect(mouseX, mouseY, 50, 50);
-      }
+      noFill();
+      stroke(230, 120, 29);
+      bezier(mouseX, mouseY, pmouseX, pmouseY, 1000, 1000, 100, 500, 200, 400, 100, 400);
 
     }
   }
