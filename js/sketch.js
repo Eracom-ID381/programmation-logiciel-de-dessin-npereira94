@@ -28,7 +28,7 @@ function draw() {
   stroke(0);
   textSize(10);
   text('Medusa', 50, 100);
-  text('Medusa', 50, 100);
+  text('Down the road', 50, 180);
   text('Rousse', 50, 260);
   text('Blue World', 50, 340);
 
