@@ -132,7 +132,9 @@ function keyPressed() {
     mode = 3;
     background(0);
   }
-
+  if (keyCode === ENTER) {
+    save = cnv;
+  }
   if (keyCode === BACKSPACE) {
     background(0);
   }
