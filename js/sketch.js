@@ -8,10 +8,10 @@ let mode = 0;
 
 function preload() {
   // soundFormats('mp3', 'ogg');
-  mySound1 = loadSound('audio/bebe.mp3');
-  mySound2 = loadSound('audio/C2C.mp3');
-  mySound3 = loadSound('audio/blue.mp3');
-  mySound4 = loadSound('audio/rousse.mp3');
+  mySound1 = loadSound('./audio/bebe.mp3');
+  mySound2 = loadSound('./audio/C2C.mp3');
+  mySound3 = loadSound('./audio/blue.mp3');
+  mySound4 = loadSound('./audio/rousse.mp3');
 }
 
 
